@@ -6,6 +6,8 @@
  * @version 1.0.3.0 JH 30/08/2018 Fixes
  */
 
+const fs = require('fs');
+
 class ImageProcessor {
     /**
      * Constructor</summary>
@@ -16,9 +18,7 @@ class ImageProcessor {
     constructor(pFolderPath, pConvertExecutable)
     {
         this.FolderPath = pFolderPath;
-        this.ConvertPath = Path.Combine(this.FolderPath, pConvertExecutable);
-        this.Shell = new ActiveXObject("WScript.Shell");
-        this.FileSystem = new ActiveXObject("Scripting.FileSystemObject");
+        this.ConvertPath = fs.Combine(this.FolderPath, pConvertExecutable);
     }
 
     /**

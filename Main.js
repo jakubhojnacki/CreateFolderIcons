@@ -6,13 +6,13 @@
  * @version 2.0.1.0 JH 28/10/2019 Node.JS version
  */
 
-const Application = require("./Bin/Application.js");
-const ImageFormat = require("./Bin/ImageFormat.js");
+const Application = require("./Bin/Application.js").Application;
+const ImageFormat = require("./Bin/ImageFormat.js").ImageFormat;
 
 (function Main() {
-    var ImageProcessorFolderPath = "";
-    var ImageProcessorConvertExecutable = "";
-    var UseBatch = false;
+    let ImageProcessorFolderPath = "";
+    let ImageProcessorConvertExecutable = "";
+    let UseBatch = false;
     
     if (UseBatch) 
     {
@@ -36,6 +36,6 @@ const ImageFormat = require("./Bin/ImageFormat.js");
         new ImageFormat("Image.ico", 6, "016.png", 12, 3, 2, "016-2.png")
     ];
 
-    var TheApplication = new Application(ImageProcessorFolderPath, ImageProcessorConvertExecutable, ImageFormats, "*.png");
+    let TheApplication = new Application(ImageProcessorFolderPath, ImageProcessorConvertExecutable, ImageFormats, "*.png");
     TheApplication.Run();
 })();

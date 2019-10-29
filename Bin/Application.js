@@ -6,9 +6,10 @@
  * @version 1.0.3.0 JH 30/08/2018 Fixes
  */
 
-const ImagePage = require("./ImagePage.js");
-const ImageProcessor = require("./ImageProcessor.js");
-const Path = require("./Toolkit/Path.js");
+const console = require('console');
+const fs = require('fs');
+const ImagePage = require("./ImagePage.js").ImagePage;
+const ImageProcessor = require("./ImageProcessor.js").ImageProcessor;
 
 class Application {
     /**
@@ -21,7 +22,7 @@ class Application {
      */
     constructor(pImageProcessorFolderPath, pImageProcessorConvertExecutable, pImageFormats, pCleanupMask) {
         // Constants
-        this.IgnoreFoldersWithPrefix = ".";
+        this.IconsSubFolderPath = "Icons";
         this.EmptyFolderName = this.IgnoreFoldersWithPrefix + "Empty";
         this.EmptyBackFileNameTemplate = "{0}B.{1}";
         this.EmptyFrontFileNameTemplate = "{0}F.{1}";
@@ -31,13 +32,9 @@ class Application {
         // General properties
         this.ImageProcessor = new ImageProcessor(pImageProcessorFolderPath, pImageProcessorConvertExecutable);
         this.ImageFormats = pImageFormats;
-        this.RootFolder = null;
-        this.EmptyImageFolderPath = null;
+        this.RootFolderPath = "";
+        this.EmptyIconFolderPath = "";
         this.CleanupMask = pCleanupMask;
-
-        // Internal properties
-        this.Shell = new ActiveXObject("WScript.Shell");
-        this.FileSystem = new ActiveXObject("Scripting.FileSystemObject");
     }
 
     /**
@@ -54,23 +51,21 @@ class Application {
      * @public
      */
     Initialise() {
-        var lScriptFile = this.FileSystem.getFile(WScript.ScriptFullName);
-        this.RootFolder = lScriptFile.ParentFolder;
-        this.EmptyImageFolderPath = Path.Combine(this.RootFolder.path, this.EmptyFolderName);
+        this.RootFolderPath = __dirname;
+        this.EmptyIconFolderPath = fs.Combine(this.RootFolderPath.path, this.EmptyFolderName);
     }
 
     /**
      * Processing images
      * @public
      */
-    ProcessImages() {
-        var lFolders = new Enumerator(this.RootFolder.subFolders);
-        var lFolder = null;
-        for (; !lFolders.atEnd(); lFolders.moveNext()) {
-            lFolder = lFolders.item();
-            if (!lFolder.name.StartsWith(this.IgnoreFoldersWithPrefix))
-                this.ProcessImage(lFolder);
-        }
+    ProcessImages() {8
+        const lEntries = fs.readdirSync(this.RootFolderPath, { withFileTypes: true });
+        lEntries.forEach(lEntry => {
+            console.log(lEntry.name);
+            //^^^if (!lFolder.name.StartsWith(this.IgnoreFoldersWithPrefix))
+            //^^^    this.ProcessImage(lFolder);
+        });
     }
 
     /**
@@ -86,12 +81,12 @@ class Application {
         var lImagePaths = [];
         for (lImageFormatIndex = 0; lImageFormatIndex < this.ImageFormats.length; lImageFormatIndex++) {
             lImageFormat = this.ImageFormats[lImageFormatIndex];
-            lSourceFilePath = Path.Combine(lFolderPath, lImageFormat.SourceFileName);
-            lDestinationFilePath = Path.Combine(lFolderPath, lImageFormat.DestinationFileName);
+            lSourceFilePath = FileSystem.Combine(lFolderPath, lImageFormat.SourceFileName);
+            lDestinationFilePath = FileSystem.Combine(lFolderPath, lImageFormat.DestinationFileName);
             this.ImageProcessor.ExtractImage(lSourceFilePath, lImageFormat.Index, lDestinationFilePath);
             this.ImageProcessor.ResizeImage(lDestinationFilePath, lDestinationFilePath, lImageFormat.ResizeTo, lImageFormat.ResizeTo);
             this.MergeImages(lImageFormat, lDestinationFilePath);
-            lMergedImagePath = Path.Combine(lFolderPath, lImageFormat.MergedFileName);
+            lMergedImagePath = FileSystem.Combine(lFolderPath, lImageFormat.MergedFileName);
             lImagePaths.push(lMergedImagePath);
         }
         this.CombineImages(lImagePaths, pFolder);
@@ -124,10 +119,10 @@ class Application {
      * @param pTemplate: Template to use
      */
     ConstructEmptyFilePath(pImageFormat, pTemplate) {
-        var lFileNameWithoutExtension = Path.GetFileNameWithoutExtension(pImageFormat.DestinationFileName);
-        var lFileExtension = Path.GetExtension(pImageFormat.DestinationFileName);
+        var lFileNameWithoutExtension = FileSystem.GetFileNameWithoutExtension(pImageFormat.DestinationFileName);
+        var lFileExtension = FileSystem.GetExtension(pImageFormat.DestinationFileName);
         var lFileName = pTemplate.Format(lFileNameWithoutExtension, lFileExtension);
-        var lFilePath = Path.Combine(this.EmptyImageFolderPath, lFileName);
+        var lFilePath = FileSystem.Combine(this.EmptyIconFolderPath, lFileName);
         return lFilePath;
     }
 
@@ -137,7 +132,7 @@ class Application {
      * @param pImagePaths: An array of image paths
      */
     CombineImages(pImagePaths, pFolder) {
-        var lDestinationFilePath = Path.Combine(pFolder, this.FinalImageName);
+        var lDestinationFilePath = FileSystem.Combine(pFolder, this.FinalImageName);
         this.ImageProcessor.CombineImages(pImagePaths, lDestinationFilePath);
     }
 
@@ -147,8 +142,8 @@ class Application {
      * @param pFolderPath: Folder path to perform cleanups in
      */
     Cleanup(pFolderPath) {
-        var lCleanupMask = Path.Combine(pFolderPath, this.CleanupMask);
-        this.FileSystem.deleteFile(lCleanupMask, true);
+        var lCleanupMask = FileSystem.Combine(pFolderPath, this.CleanupMask);
+        FileSystem.deleteFile(lCleanupMask);
     }
 
     /**
@@ -159,10 +154,10 @@ class Application {
     CopyToFinalFolder(pFolder) {
         var lFinalExtension = Path.GetExtension(this.FinalImageName);
         var lSourceFilePath = Path.Combine(pFolder, this.FinalImageName);
-        var lDestinationFolderPath = Path.Combine(this.RootFolder.path, this.FinalFolderName);
+        var lDestinationFolderPath = Path.Combine(this.RootFolderPath.path, this.FinalFolderName);
         var lDestinationFileName = "{0}.{1}".Format(pFolder.name, lFinalExtension);
         var lDestinationFilePath = Path.Combine(lDestinationFolderPath, lDestinationFileName);
-        this.FileSystem.copyFile(lSourceFilePath, lDestinationFilePath);
+        FileSystem.copyFile(lSourceFilePath, lDestinationFilePath);
     }
 }
 
