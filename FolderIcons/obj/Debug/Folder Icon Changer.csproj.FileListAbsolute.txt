@@ -1,0 +1,16 @@
+D:\Development\Visual Studio\Folder Icon Changer\Folder Icon Changer\bin\Debug\FolderIconChanger.exe
+D:\Development\Visual Studio\Folder Icon Changer\Folder Icon Changer\bin\Debug\FolderIconChanger.pdb
+D:\Development\Visual Studio\Folder Icon Changer\Folder Icon Changer\obj\Debug\MainWindow.baml
+D:\Development\Visual Studio\Folder Icon Changer\Folder Icon Changer\obj\Debug\MainWindow.g.cs
+D:\Development\Visual Studio\Folder Icon Changer\Folder Icon Changer\obj\Debug\FolderIconChanger_MarkupCompile.cache
+D:\Development\Visual Studio\Folder Icon Changer\Folder Icon Changer\obj\Debug\FolderIconChanger.g.resources
+D:\Development\Visual Studio\Folder Icon Changer\Folder Icon Changer\obj\Debug\JHJ.FolderIconChanger.Properties.Resources.resources
+D:\Development\Visual Studio\Folder Icon Changer\Folder Icon Changer\obj\Debug\Folder Icon Changer.csproj.GenerateResource.Cache
+D:\Development\Visual Studio\Folder Icon Changer\Folder Icon Changer\obj\Debug\FolderIconChanger.exe
+D:\Development\Visual Studio\Folder Icon Changer\Folder Icon Changer\obj\Debug\FolderIconChanger.pdb
+D:\Development\Visual Studio\Folder Icon Changer\Folder Icon Changer\obj\Debug\JHJ.FolderIconChanger.Resources.Arguments.resources
+D:\Development\Visual Studio\Folder Icon Changer\Folder Icon Changer\obj\Debug\TheApplication.g.cs
+D:\Development\Visual Studio\Folder Icon Changer\Folder Icon Changer\obj\Debug\JHJ.FolderIconChanger.Resources.ConfigurationFiles.resources
+D:\Development\Visual Studio\Folder Icon Changer\Folder Icon Changer\obj\Debug\JHJ.FolderIconChanger.Resources.FolderIconChanger.resources
+D:\Development\Visual Studio\Folder Icon Changer\Folder Icon Changer\obj\Debug\JHJ.FolderIconChanger.Resources.MainWindow.resources
+D:\Development\Visual Studio\Folder Icon Changer\Folder Icon Changer\obj\Debug\JHJ.FolderIconChanger.Resources.TheApplication.resources

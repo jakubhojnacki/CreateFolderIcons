@@ -1,0 +1,20 @@
+﻿<Window x:Class="JHJ.FolderIcons.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="About Folder Icons" Height="400" Width="600" Icon="FolderIcons.ico" ShowInTaskbar="False" ResizeMode="NoResize">
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+		<Image Height="256" Width="256" Source="Resources/Images/FolderIcons256.png" Stretch="None"/>
+		<StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+			<Label Name="AssemblyTitleLabel" Content="[Title]" HorizontalAlignment="Center" FontSize="24" FontWeight="Bold" />
+			<Label Name="AssemblyVersionLabel" Content="[Version]" HorizontalAlignment="Center" FontSize="16" FontWeight="Bold" />
+			<Label Name="AssemblyDescriptionLabel" Content="[Description]" HorizontalAlignment="Center" FontSize="12" FontWeight="Bold" Margin="0,20,0,0" />
+			<Label Name="AssemblyCompanyLabel" Content="[Company]" HorizontalAlignment="Center" FontSize="12" FontWeight="Bold" Margin="0,20,0,0" />
+			<Label Name="AssemblyCopyrightLabel" Content="[Copyright]" HorizontalAlignment="Center" FontSize="12" FontWeight="Bold" />
+			<Button Name="CloseButton" Margin="0,40,0,0" Click="CloseButtonClick">Close</Button>
+		</StackPanel>
+	</Grid>
+</Window>

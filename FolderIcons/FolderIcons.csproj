@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A42187A7-AA18-41B2-9966-4CEBD1010D89}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JHJ.FolderIcons</RootNamespace>
+    <AssemblyName>FolderIcons</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>FolderIcons.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Controls.Ribbon" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="TheApplication.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Diagnostics\Log.cs" />
+    <Compile Include="LogWindow.xaml.cs">
+      <DependentUpon>LogWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AboutWindow.xaml.cs">
+      <DependentUpon>AboutWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Diagnostics\ErrorEventArgs.cs" />
+    <Compile Include="Diagnostics\ErrorToolkit.cs" />
+    <Compile Include="Diagnostics\FolderIconsException.cs" />
+    <Compile Include="FileSystem\DriveEventArgs.cs" />
+    <Compile Include="FolderIconChanger\FolderIconChangerCounters.cs" />
+    <Compile Include="FolderIconChanger\FolderIconChangerCountersEventArgs.cs" />
+    <Compile Include="FolderIconChanger\FolderIconChangerState.cs" />
+    <Compile Include="FolderIconChanger\FolderIconChangerStateContentType.cs" />
+    <Compile Include="FolderIconChanger\FolderStatusEventArgs.cs" />
+    <Compile Include="FolderIconChanger\FolderStatus.cs" />
+    <Compile Include="FolderIconChanger\IFolderIconChangerStateContent.cs" />
+    <Compile Include="Resources\Arguments.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Arguments.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\ConfigurationFiles.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConfigurationFiles.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\FileSystem.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FileSystem.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\FolderIconChanger.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FolderIconChanger.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Icons.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Icons.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\MainWindow.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MainWindow.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\TheApplication.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TheApplication.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TheApplication.xaml.cs">
+      <DependentUpon>TheApplication.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FolderIconChanger\FolderIconChanger.cs" />
+    <Compile Include="Tools\AssemblyToolkit.cs" />
+    <Compile Include="Tools\ApplicationToolkit.cs" />
+    <Compile Include="Tools\DescriptionBuilder.cs" />
+    <Compile Include="Tools\FileSystemToolkit.cs" />
+    <Compile Include="Tools\TreeViewBuilder.cs" />
+    <Compile Include="Tools\TypeConversion.cs" />
+    <Compile Include="Tools\TypeConverter.cs" />
+    <Compile Include="Tools\XmlSerialiser.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Arguments\Argument.cs" />
+    <Compile Include="Arguments\Arguments.cs" />
+    <Compile Include="Arguments\ArgumentsEventArgs.cs" />
+    <Compile Include="ConfigurationFiles\ConfigurationFile.cs" />
+    <Compile Include="ConfigurationFiles\ConfigurationFileEventArgs.cs" />
+    <Compile Include="ConfigurationFiles\ConfigurationFileIterator.cs" />
+    <Compile Include="ConfigurationFiles\ConfigurationFileProperty.cs" />
+    <Compile Include="ConfigurationFiles\ConfigurationFilePropertyEventArgs.cs" />
+    <Compile Include="ConfigurationFiles\ConfigurationFileSection.cs" />
+    <Compile Include="ConfigurationFiles\ConfigurationFileSectionEventArgs.cs" />
+    <Compile Include="ConfigurationFiles\ConfigurationFileSerialiser.cs" />
+    <Compile Include="FileSystem\Drive.cs" />
+    <Compile Include="FileSystem\FileSystem.cs" />
+    <Compile Include="FileSystem\FileSystemEventArgs.cs" />
+    <Compile Include="FileSystem\FileSystemIterator.cs" />
+    <Compile Include="FileSystem\Folder.cs" />
+    <Compile Include="FileSystem\FolderEventArgs.cs" />
+    <Compile Include="FileSystem\SubFolderProcessing.cs" />
+    <Compile Include="Icons\Icon.cs" />
+    <Compile Include="Icons\Icons.cs" />
+    <Compile Include="Icons\IconsEventArgs.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Arguments.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Arguments.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ConfigurationFiles.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ConfigurationFiles.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\FileSystem.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FileSystem.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\FolderIconChanger.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FolderIconChanger.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Icons.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Icons.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MainWindow.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MainWindow.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\TheApplication.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TheApplication.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TheApplication.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\About32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="LogWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AboutWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Exit32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\LoadFileSystem32.png" />
+    <Resource Include="Resources\Images\LoadIcons32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Setup\FileSystem.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Setup\Icons.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Execute32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\FileSystem24.png" />
+    <Resource Include="Resources\Images\Icon16.png" />
+    <Resource Include="Resources\Images\Icons24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Drive16.png" />
+    <Resource Include="Resources\Images\Drive24.png" />
+    <Resource Include="Resources\Images\Folder16.png" />
+    <Resource Include="Resources\Images\Folder24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\FolderIcons256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Log32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Clear32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="FolderIcons.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,24 @@
+﻿<Window x:Class="JHJ.FolderIcons.LogWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Folder Icons Log" Height="400" Width="600" Icon="FolderIcons.ico" Loaded="WindowLoaded">
+	<DockPanel x:Name="MainPanel">
+		<Ribbon DockPanel.Dock="Top" Margin="0,-22,0,0">
+			<Ribbon.ApplicationMenu>
+				<RibbonApplicationMenu>
+					<RibbonApplicationMenuItem Name="ExitRibbonApplicationMenuItem" Header="Exit" ImageSource="..\Resources\Images\Exit32.png" Click="ExitRibbonApplicationMenuItemClick" />
+				</RibbonApplicationMenu>
+			</Ribbon.ApplicationMenu>
+			<RibbonTab Header="General">
+				<RibbonGroup>
+					<RibbonButton Name="ClearRibbonButton" LargeImageSource="..\Resources\Images\Clear32.png" Label="Clear Log" Click="ClearLogRibbonButtonClick" />
+				</RibbonGroup>
+				<RibbonGroup>
+					<RibbonButton Name="ExitRibbonButton" LargeImageSource="..\Resources\Images\Exit32.png" Label="Exit" Click="ExitRibbonButtonClick" />
+				</RibbonGroup>
+			</RibbonTab>
+		</Ribbon>
+		<TextBox Name="LogTextBox" Margin="10,10,10,10" ScrollViewer.HorizontalScrollBarVisibility="Hidden" 
+					ScrollViewer.VerticalScrollBarVisibility="Visible" IsReadOnly="True" />
+	</DockPanel>
+</Window>

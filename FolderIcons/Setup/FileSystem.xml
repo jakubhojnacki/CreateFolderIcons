@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FileSystem>
+	<Drive Name="C">
+		<Folder Name="archive" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="inetpub" SubFolderProcessing="SameIcon" SubFolderDepth="1" />
+		<Folder Name="programfiles" SubFolderProcessing="SameIcon" SubFolderDepth="1" />
+		<Folder Name="programfilesx86" SubFolderProcessing="SameIcon" SubFolderDepth="1" />
+		<Folder Name="programdata" SubFolderProcessing="No" SubFolderDepth="0" />
+		<Folder Name="users" SubFolderProcessing="No" SubFolderDepth="0" />
+		<Folder Name="windows" SubFolderProcessing="No" SubFolderDepth="0" />
+	</Drive>
+	<Drive Name="D">
+		<Folder Name="aga" Icon="user" SubFolderProcessing="No" SubFolderDepth="0" />
+		<Folder Name="archive" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="books" SubFolderProcessing="SameIcon" SubFolderDepth="0" />
+		<Folder Name="books\favourites" SubFolderProcessing="SameIcon" SubFolderDepth="0" />
+		<Folder Name="books\it" SubFolderProcessing="SameIcon" SubFolderDepth="1" />
+		<Folder Name="books\light" SubFolderProcessing="SameIcon" SubFolderDepth="1" />
+		<Folder Name="books\lyrics" SubFolderProcessing="SameIcon" SubFolderDepth="1" />
+		<Folder Name="books\subjects" SubFolderProcessing="SameIcon" SubFolderDepth="1" />
+		<Folder Name="company" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="development" SubFolderProcessing="No" SubFolderDepth="0" />
+		<Folder Name="development\concepts" Icon="development" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="development\docker" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="development\dynamicsnav" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="development\graphics" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="development\javascript" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="development\office" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="development\powershell" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="development\repository" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="development\scripting" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="development\setup" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="development\thenavpeople" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="development\visualstudio" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="development\web" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="development\xml" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="downloads" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="home" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="important" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="installs" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="jakub" Icon="user" SubFolderProcessing="SameIcon" SubFolderDepth="0" />
+		<Folder Name="jakub\archive" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="jakub\cars" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="jakub\catalogue" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="jakub\cobian" Icon="backup" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="jakub\cv" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="jakub\graphics" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="jakub\manuals" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="jakub\notes" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="jakub\places" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="jakub\travel" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="multimedia" SubFolderProcessing="SameIcon" SubFolderDepth="0" />
+		<Folder Name="multimedia\classicshell" Icon="windows" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="multimedia\cursors" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="multimedia\development" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="multimedia\fonts" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="multimedia\icons" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="multimedia\landscapes" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="multimedia\languages" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="multimedia\movies" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="multimedia\music" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="multimedia\musicselection" Icon="music" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="multimedia\musicnew" Icon="music" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="multimedia\photos" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="multimedia\thenavpeople" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="multimedia\wallpapers" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="projects" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="sql" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="temp" SubFolderProcessing="No" SubFolderDepth="0" />
+		<Folder Name="thenavpeople" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="tools" SubFolderProcessing="No" SubFolderDepth="0" />
+		<Folder Name="tools\applications" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="tools\certificates" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="tools\licences" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="tools\scripts" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="tools\services" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="tools\systems" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="tools\templates" Icon="document" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="tools\terminals" SubFolderProcessing="SameIcon" SubFolderDepth="0" />
+		<Folder Name="tools\thenavpeople" SubFolderProcessing="SameIcon" SubFolderDepth="0" />
+		<Folder Name="tools\vpns" SubFolderProcessing="SameIcon" SubFolderDepth="0" />
+		<Folder Name="tools\websites" SubFolderProcessing="SameIcon" SubFolderDepth="0" />
+		<Folder Name="virtual" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+	</Drive>
+	<Drive Name="F">
+		<Folder Name="archive" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="books" SubFolderProcessing="SameIcon" SubFolderDepth="0" />
+		<Folder Name="books\favourites" SubFolderProcessing="SameIcon" SubFolderDepth="0" />
+		<Folder Name="books\it" SubFolderProcessing="SameIcon" SubFolderDepth="1" />
+		<Folder Name="books\light" SubFolderProcessing="SameIcon" SubFolderDepth="1" />
+		<Folder Name="books\lyrics" SubFolderProcessing="SameIcon" SubFolderDepth="1" />
+		<Folder Name="books\subjects" SubFolderProcessing="SameIcon" SubFolderDepth="1" />
+		<Folder Name="installs" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="multimedia" SubFolderProcessing="SameIcon" SubFolderDepth="0" />
+		<Folder Name="multimedia\classicshell" Icon="windows" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="multimedia\cursors" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="multimedia\development" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="multimedia\fonts" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="multimedia\icons" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="multimedia\landscapes" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="multimedia\languages" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="multimedia\movies" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="multimedia\music" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="multimedia\musiccar" Icon="music" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="multimedia\musicnew" Icon="music" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="multimedia\photos" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="multimedia\thenavpeople" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="multimedia\wallpapers" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="projects" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="snapshots" SubFolderProcessing="SameIcon" SubFolderDepth="-1" />
+		<Folder Name="temp" SubFolderProcessing="No" SubFolderDepth="0" />
+		<Folder Name="virtual" SubFolderProcessing="SameIcon" SubFolderDepth="1" />
+	</Drive>
+</FileSystem>
